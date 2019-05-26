@@ -1,0 +1,33 @@
+.option {
+  min-height: 10rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 2rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s;
+
+  &__text {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  }
+}
+.warm-up {
+  background-color: #936a70;
+}
+.strength-day {
+  background-color: #da8174;
+}
+.skill-day {
+  background-color: #b58a64;
+}

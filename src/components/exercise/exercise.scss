@@ -1,0 +1,56 @@
+.exercise {
+  margin-bottom: 1rem;
+  color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    justify-items: center;
+    align-items: center;
+
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+    padding: 5px;
+    font-size: 1rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__info-toggles .icon {
+    display: inline;
+    padding-right: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 7px;
+  }
+}
+
+.warm-up-exercise {
+  background-color: #936a70;
+}
+.strength-exercise {
+  background-color: #da8174;
+}
+.skill-exercise {
+  background-color: #b58a64;
+}
+
+.secondary {
+  grid-column: span 3;
+  font-weight: 100;
+  font-size: 1.3rem;
+  color: rgb(240, 240, 240);
+}

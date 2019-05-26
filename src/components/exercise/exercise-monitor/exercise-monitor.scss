@@ -1,0 +1,44 @@
+.monitor {
+  display: grid;
+  justify-items: center;
+
+  &__name {
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__changers {
+    display: grid;
+    grid-template-columns: minmax(5px, 40px) minmax(5px, 10px);
+    justify-items: center;
+    align-items: center;
+
+    margin-top: 10px;
+  }
+
+  &__value {
+    width: 50px;
+    padding-top: 3px;
+    border: none;
+    font-size: 2rem;
+  }
+
+  &__btns {
+    display: grid;
+  }
+
+  &__btn {
+    padding: 2px 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    color: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

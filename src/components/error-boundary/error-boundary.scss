@@ -1,0 +1,10 @@
+.error-boundary {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &__text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 5px;
+  }
+}

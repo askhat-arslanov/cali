@@ -1,0 +1,29 @@
+.strength-link,
+.skill-link {
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  }
+}
+.strength-link {
+  background-color: #da8174;
+
+  &:hover {
+    background-color: #d68a7f;
+  }
+}
+.skill-link {
+  background-color: #b58a64;
+
+  &:hover {
+    background-color: #b48f6f;
+  }
+}
