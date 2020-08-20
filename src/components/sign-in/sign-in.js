@@ -46,41 +46,33 @@ const SignInFormBase = ({ firebase, history }) => {
       loading={loading}
       onSubmit={handleSubmit}
     >
-      {() => (
-        <>
-          <div>
-            <input
-              type="text"
-              name="login"
-              value={email}
-              placeholder="Email"
-              onChange={e => setEmail(e.target.value)}
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              name="text"
-              value={password}
-              placeholder="Password"
-              onChange={e => setPassword(e.target.value)}
-            />
-          </div>
-        </>
-      )}
+      <input
+        type="text"
+        name="login"
+        value={email}
+        autocomplete="off"
+        placeholder="Email"
+        onChange={e => setEmail(e.target.value)}
+      />
+
+      <input
+        type="password"
+        name="text"
+        value={password}
+        autocomplete="off"
+        placeholder="Password"
+        onChange={e => setPassword(e.target.value)}
+      />
     </Form>
   )
 }
 
-const SignInForm = compose(
-  withFirebase,
-  withRouter
-)(SignInFormBase)
+const SignInForm = compose(withFirebase, withRouter)(SignInFormBase)
 
 const SignInLink = () => (
-  <p>
+  <p className="auth-redirect">
     Already have an account?{' '}
-    <Link to="/signin" className="auth-link">
+    <Link to="/signin" className="auth-redirect__link">
       Login
     </Link>
   </p>

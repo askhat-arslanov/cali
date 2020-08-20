@@ -3,6 +3,12 @@
   overflow: hidden;
   min-height: 100vh;
 
+  &__content {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 2rem 4vw;
+  }
+
   &__decorate-icon {
     width: 40vw;
     position: absolute;

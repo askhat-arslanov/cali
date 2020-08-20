@@ -29,7 +29,7 @@
       height: 2px;
       display: block;
       content: '';
-      background-color: #fd652d;
+      background-color: var(--color-orange);
       transform: scaleX(0);
       transform-origin: left;
       transition: all 0.2s ease;

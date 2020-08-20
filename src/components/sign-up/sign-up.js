@@ -23,8 +23,7 @@ const SignUpFormBase = ({ firebase, history }) => {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
-  const isInvalid =
-    !login || !email || !passwordOne || passwordOne !== passwordTwo
+  const isInvalid = !login || !email || !passwordOne || passwordOne !== passwordTwo
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -55,55 +54,43 @@ const SignUpFormBase = ({ firebase, history }) => {
       loading={loading}
       onSubmit={handleSubmit}
     >
-      {() => (
-        <>
-          <div>
-            <input
-              type="text"
-              value={login}
-              placeholder="Login"
-              onChange={e => setLogin(e.target.value)}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              value={email}
-              placeholder="Email"
-              onChange={e => setEmail(e.target.value)}
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              value={passwordOne}
-              placeholder="Password"
-              onChange={e => setPasswordOne(e.target.value)}
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              value={passwordTwo}
-              placeholder="Confirm password"
-              onChange={e => setPasswordTwo(e.target.value)}
-            />
-          </div>
-        </>
-      )}
+      <input
+        type="text"
+        value={login}
+        placeholder="Login"
+        onChange={e => setLogin(e.target.value)}
+      />
+
+      <input
+        type="text"
+        value={email}
+        placeholder="Email"
+        onChange={e => setEmail(e.target.value)}
+      />
+
+      <input
+        type="password"
+        value={passwordOne}
+        placeholder="Password"
+        onChange={e => setPasswordOne(e.target.value)}
+      />
+
+      <input
+        type="password"
+        value={passwordTwo}
+        placeholder="Confirm password"
+        onChange={e => setPasswordTwo(e.target.value)}
+      />
     </Form>
   )
 }
 
-const SignUpForm = compose(
-  withFirebase,
-  withRouter
-)(SignUpFormBase)
+const SignUpForm = compose(withFirebase, withRouter)(SignUpFormBase)
 
 const SignUpLink = () => (
-  <p className="">
+  <p className="auth-redirect">
     Don't have an account?{' '}
-    <Link to="/signup" className="auth-link">
+    <Link to="/signup" className="auth-redirect__link">
       SignUp
     </Link>
   </p>
