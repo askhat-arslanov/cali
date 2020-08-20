@@ -6,46 +6,32 @@ import { withAuthUser } from '../session'
 import SignOutButton from '../sign-out'
 
 const Navbar = ({ authUser }) => {
+  const createAuthLinks = () => <SignOutButton />
+
+  const createNonAuthLinks = () => (
+    <>
+      <NavLink className="navbar__link" to="/signin">
+        Login
+      </NavLink>
+      <NavLink className="navbar__link" to="/signup">
+        Sign Up
+      </NavLink>
+    </>
+  )
+
+  const createCommonLinks = () => (
+    <NavLink className="navbar__link" exact to="/">
+      Home
+    </NavLink>
+  )
+
   return (
     <nav className="navbar">
       <ul className="navbar__links">
-        <GeneralLinks />
-        {authUser ? <AuthLinks /> : <NoneAuthLinks />}
+        {createCommonLinks()}
+        {authUser ? createAuthLinks() : createNonAuthLinks()}
       </ul>
     </nav>
-  )
-}
-
-const GeneralLinks = () => {
-  return (
-    <>
-      <li className="navbar__link">
-        <NavLink exact to="/">
-          Home
-        </NavLink>
-      </li>
-    </>
-  )
-}
-
-const AuthLinks = () => {
-  return (
-    <>
-      <SignOutButton />
-    </>
-  )
-}
-
-const NoneAuthLinks = () => {
-  return (
-    <>
-      <li className="navbar__link">
-        <NavLink to="/signin">Login</NavLink>
-      </li>
-      <li className="navbar__link">
-        <NavLink to="/signup">Sign Up</NavLink>
-      </li>
-    </>
   )
 }
 
