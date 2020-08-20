@@ -1,15 +1,13 @@
 .navbar {
-  grid-column: site-left / site-right;
-  display: grid;
-  align-content: center;
-  height: 3rem;
   background-color: #3b3f47;
 
   &__links {
+    margin: 0 auto;
+    max-width: 30rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, auto));
     justify-items: center;
-    padding: 0;
+    padding: 0.5rem;
   }
 
   &__link {
