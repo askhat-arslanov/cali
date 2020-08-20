@@ -5,12 +5,15 @@ import { LightSpinner } from '../../spinner'
 
 const ExerciseDescription = ({ description, loading }) => {
   if (loading) return <LightSpinner />
+  
   return (
     <div className="description">
       {description.length ? (
-        <ul>
+        <ul className="description__list">
           {description.map((item, idx) => (
-            <li key={idx}>{item}</li>
+            <li className="description__item" key={idx}>
+              {item}
+            </li>
           ))}
         </ul>
       ) : (
