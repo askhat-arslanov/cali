@@ -3,7 +3,7 @@
   display: grid;
   align-content: center;
   height: 3rem;
-  background-color: #605565;
+  background-color: #3b3f47;
 
   &__links {
     display: grid;
@@ -13,18 +13,34 @@
   }
 
   &__link {
+    position: relative;
     list-style: none;
     color: #fff;
     font-size: 1rem;
     text-transform: uppercase;
-    position: relative;
     padding: 6px 12px;
     border-radius: 7px;
     cursor: pointer;
 
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      display: block;
+      content: '';
+      background-color: #fd652d;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 0.2s ease;
+    }
+
     &.active,
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 }

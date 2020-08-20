@@ -3,13 +3,13 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 const config = {
-  apiKey: '***',
-  authDomain: '***.firebaseapp.com',
-  databaseURL: '***',
-  projectId: '***',
-  storageBucket: '***',
-  messagingSenderId: '***',
-  appId: '***'
+  apiKey: "AIzaSyAeqkE7sThzxlE9HrNyxJpMyvFhqsqX-lg",
+  authDomain: "reddit-recommended-routine.firebaseapp.com",
+  databaseURL: "https://reddit-recommended-routine.firebaseio.com",
+  projectId: "reddit-recommended-routine",
+  storageBucket: "reddit-recommended-routine.appspot.com",
+  messagingSenderId: "758863756195",
+  appId: "1:758863756195:web:55b3956391d0adc2"
 }
 
 class Firebase {
