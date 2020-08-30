@@ -12,7 +12,8 @@
 
   &__changers {
     display: grid;
-    grid-template-columns: minmax(5px, 40px) minmax(5px, 10px);
+    grid-template-columns: max-content 25px;
+    column-gap: 2px;
     justify-items: center;
     align-items: center;
 
@@ -20,7 +21,6 @@
   }
 
   &__value {
-    width: 50px;
     padding-top: 3px;
     border: none;
     font-size: 2rem;

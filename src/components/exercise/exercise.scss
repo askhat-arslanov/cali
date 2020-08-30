@@ -3,6 +3,7 @@
   color: #fff;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+  background: var(--noisy-back);
 
   &__header {
     display: grid;
@@ -43,13 +44,30 @@
 }
 
 .warm-up-exercise {
-  background-color: #936a70;
+  background: var(--noisy-back),
+    linear-gradient(to right bottom, rgba(209, 71, 120, 0.8), rgba(122, 25, 85, 0.8));
+
+  &:hover {
+    background: var(--noisy-back), linear-gradient(to right bottom, #cf4676, #851b5c);
+  }
 }
+
 .strength-exercise {
-  background-color: #da8174;
+  background: var(--noisy-back),
+    linear-gradient(to right bottom, rgba(94, 153, 117, 0.8), rgba(58, 94, 95, 0.8));
+
+  &:hover {
+    background: var(--noisy-back), linear-gradient(to right bottom, #5e9975, #395e5e);
+  }
 }
+
 .skill-exercise {
-  background-color: #b58a64;
+  background: var(--noisy-back),
+    linear-gradient(to right bottom,  rgba(62, 120, 151, 0.8), rgba(46, 73, 108, 0.8));
+
+  &:hover {
+    background: var(--noisy-back), linear-gradient(to right bottom, #3e7897, #2e496c);
+  }
 }
 
 .secondary {
