@@ -9,10 +9,10 @@ const ExerciseMonitor = ({ name, value, onUp, onDown }) => {
       <div className="monitor__changers">
         <span className="monitor__value">{value}</span>
         <div className="monitor__btns">
-          <button className="monitor__btn" onClick={onUp}>
+          <button className="monitor__btn monitor__btn--up" onClick={onUp}>
             &#9650;
           </button>
-          <button className="monitor__btn" onClick={onDown}>
+          <button className="monitor__btn monitor__btn--down" onClick={onDown}>
             &#9660;
           </button>
         </div>

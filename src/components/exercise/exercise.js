@@ -52,7 +52,7 @@ const Exercise = ({ children, firebase, name, routine }) => {
           </span>
         </div>
 
-        <div className="exercise__content">{children()}</div>
+        <div className="exercise__content">{children}</div>
 
         <div className="exercise__info">
           {showDescription && (

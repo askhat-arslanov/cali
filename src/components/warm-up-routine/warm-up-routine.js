@@ -26,7 +26,7 @@ const WarmUpRoutine = ({ firebase }) => {
         const { name, reps } = exercise
         return (
           <Exercise key={name} name={name} routine={'warm-up'}>
-            {() => <p className="secondary">Reps/time: {reps}</p>}
+            <p className="secondary">Reps/time: {reps}</p>
           </Exercise>
         )
       })}

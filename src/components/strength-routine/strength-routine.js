@@ -66,13 +66,8 @@ const StengthRoutine = ({ authUser, firebase }) => {
   const handleChange = (name, kind, direction) => {
     const index = routine.findIndex(i => i.name === name)
     const exercise = { ...routine[index] }
-    exercise[kind] =
-      direction === 'up' ? exercise[kind] + 1 : exercise[kind] - 1
-    setRoutine([
-      ...routine.slice(0, index),
-      exercise,
-      ...routine.slice(index + 1)
-    ])
+    exercise[kind] = direction === 'up' ? exercise[kind] + 1 : exercise[kind] - 1
+    setRoutine([...routine.slice(0, index), exercise, ...routine.slice(index + 1)])
   }
 
   if (loading) return <BackgroundSpinner />
@@ -89,34 +84,32 @@ const StengthRoutine = ({ authUser, firebase }) => {
         const { name, reps, sets, weight } = exercise
         return (
           <Exercise key={name} name={name} routine={'strength'}>
-            {() => (
-              <>
-                <ExerciseMonitor
-                  name={'reps'}
-                  value={reps}
-                  onUp={() => handleChange(name, 'reps', 'up')}
-                  onDown={() => {
-                    if (reps > 1) handleChange(name, 'reps')
-                  }}
-                />
-                <ExerciseMonitor
-                  name={'sets'}
-                  value={sets}
-                  onUp={() => handleChange(name, 'sets', 'up')}
-                  onDown={() => {
-                    if (sets > 1) handleChange(name, 'sets')
-                  }}
-                />
-                <ExerciseMonitor
-                  name={'weight'}
-                  value={weight}
-                  onUp={() => handleChange(name, 'weight', 'up')}
-                  onDown={() => {
-                    if (weight > 0) handleChange(name, 'weight')
-                  }}
-                />
-              </>
-            )}
+            <ExerciseMonitor
+              name={'reps'}
+              value={reps}
+              onUp={() => handleChange(name, 'reps', 'up')}
+              onDown={() => {
+                if (reps > 1) handleChange(name, 'reps')
+              }}
+            />
+
+            <ExerciseMonitor
+              name={'sets'}
+              value={sets}
+              onUp={() => handleChange(name, 'sets', 'up')}
+              onDown={() => {
+                if (sets > 1) handleChange(name, 'sets')
+              }}
+            />
+            
+            <ExerciseMonitor
+              name={'weight'}
+              value={weight}
+              onUp={() => handleChange(name, 'weight', 'up')}
+              onDown={() => {
+                if (weight > 0) handleChange(name, 'weight')
+              }}
+            />
           </Exercise>
         )
       })}
@@ -124,10 +117,7 @@ const StengthRoutine = ({ authUser, firebase }) => {
   )
 }
 
-export default compose(
-  withAuthUser,
-  withFirebase
-)(StengthRoutine)
+export default compose(withAuthUser, withFirebase)(StengthRoutine)
 
 // Hook for debounce function, like _.debounce in lodash
 function useDebounce(value, delay) {
@@ -147,7 +137,7 @@ function useDebounce(value, delay) {
 function showSavedNotify() {
   const notify = document.getElementById('notify')
   notify.className = 'show'
-  setTimeout(function() {
+  setTimeout(function () {
     notify.className = notify.className.replace('show', '')
   }, 2000)
 }

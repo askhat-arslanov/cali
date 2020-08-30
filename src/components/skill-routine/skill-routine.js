@@ -25,11 +25,7 @@ const SkillRoutine = ({ firebase }) => {
         const { name, time } = exercise
         return (
           <Exercise key={name} name={name} routine={'skill'}>
-            {() => (
-              <>
-                <p className="secondary">Reps/time: {time}</p>
-              </>
-            )}
+            <p className="secondary">Reps/time: {time}</p>
           </Exercise>
         )
       })}
