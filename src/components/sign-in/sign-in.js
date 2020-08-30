@@ -50,7 +50,6 @@ const SignInFormBase = ({ firebase, history }) => {
         type="text"
         name="login"
         value={email}
-        autocomplete="off"
         placeholder="Email"
         onChange={e => setEmail(e.target.value)}
       />
@@ -59,7 +58,6 @@ const SignInFormBase = ({ firebase, history }) => {
         type="password"
         name="text"
         value={password}
-        autocomplete="off"
         placeholder="Password"
         onChange={e => setPassword(e.target.value)}
       />
