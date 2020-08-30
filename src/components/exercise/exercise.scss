@@ -1,5 +1,5 @@
 .exercise {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #fff;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
   border-radius: 5px;
@@ -11,7 +11,7 @@
     align-items: center;
 
     color: rgba(0, 0, 0, 0.3);
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 0 0 1rem 0;
     padding: 5px;
     font-size: 1rem;
@@ -24,6 +24,10 @@
     }
   }
 
+  &__info {
+    text-align: center;
+  }
+
   &__info-toggles .icon {
     display: inline;
     padding-right: 0.5rem;
@@ -32,9 +36,9 @@
   }
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     padding-bottom: 7px;
+    justify-content: center;
   }
 }
 
@@ -53,4 +57,5 @@
   font-weight: 100;
   font-size: 1.3rem;
   color: rgb(240, 240, 240);
+  text-align: center;
 }

@@ -1,4 +1,5 @@
 .monitor {
+  flex: 1 1 auto;
   display: grid;
   justify-items: center;
 
@@ -30,15 +31,32 @@
   }
 
   &__btn {
-    padding: 2px 5px;
     border: none;
     background-color: transparent;
     cursor: pointer;
     outline: none;
     color: rgba(0, 0, 0, 0.3);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+
+    &--up {
+      padding: 0 4px 1px 4px;
+    }
+    
+    &--down {
+      padding: 1px 4px 0 4px;
+    }
 
     &:hover {
-      color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      box-shadow: 0 2px 0px rgba(0, 0, 0, 0.6);
+    }
+
+    &:active {
+      transform: translateY(2px);
+      box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
     }
   }
 }
